@@ -7,12 +7,16 @@
         position: relative;
     }
     &-img {
-        position: absolute;
-        right: 0;
-        top: 50%;
-        transform: translateY(-50%);
+        max-width: fit-content;
+        position: relative;
+        @media (min-width: 1024px) {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
         &-main {
-            --size: 523px;
+            --size: clamp(320px, 37vw, 523px);
             width: var(--size);
             height: var(--size);
             background-image: url('../img/hero-admo-bg.svg');
@@ -24,16 +28,16 @@
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
-                max-width: 476px;
+                max-width: clamp(410px, 36vw, 476px);
             }
         }
         &::before {
             content: '';
             display: block;
             position: absolute;
-            top: -60px;
-            left: -60px;
-            --size: 640px;
+            top: -12%;
+            left: -12%;
+            --size: clamp(340px, 45vw, 640px);
             width: var(--size);
             height: var(--size);
             background-image: url('../img/hero-admo-bg-outer.svg');
@@ -43,7 +47,7 @@
     }
     &-title {
         max-width: 520px;
-        font-size: 48px;
+        font-size: clamp(42px, 4vw, 48px);
         line-height: 90.65%;
         span {
             font-family: var(--ff-200);
@@ -53,7 +57,7 @@
         max-width: 520px;
         margin-top: 20px;
         font-weight: 700;
-        font-size: 22px;
+        font-size: clamp(18px, 1.8vw, 22px);
         line-height: 1.25em;
         color: var(--clr-accent-100);
     }
@@ -66,5 +70,32 @@
     }
     &-btn {
         margin-top: 60px;
+    }
+}
+
+@media (max-width: 1023px) {
+    .hero {
+        padding: 50px 0;
+        background-size: 60%;
+        &-wrap {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        &-img {
+            margin-top: 50px;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .hero {
+        &-img {
+            &-main {
+                img {
+                    max-width: 100%;
+                }
+            }
+        }
     }
 }

@@ -27,6 +27,19 @@
                 max-width: 476px;
             }
         }
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: -60px;
+            left: -60px;
+            --size: 640px;
+            width: var(--size);
+            height: var(--size);
+            background-image: url('../img/hero-admo-bg-outer.svg');
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
     }
     &-title {
         max-width: 520px;

@@ -1,0 +1,57 @@
+.hero {
+    padding: 100px 0;
+    background: url('../img/hero-gradient-bg.svg') right top / contain no-repeat;
+    min-height: 580px;
+    &-wrap {
+        padding: 100px 0;
+        position: relative;
+    }
+    &-img {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        &-main {
+            --size: 523px;
+            width: var(--size);
+            height: var(--size);
+            background-image: url('../img/hero-admo-bg.svg');
+            background-repeat: no-repeat;
+            background-size: contain;
+            position: relative;
+            img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                max-width: 476px;
+            }
+        }
+    }
+    &-title {
+        max-width: 520px;
+        font-size: 48px;
+        line-height: 90.65%;
+        span {
+            font-family: var(--ff-200);
+        }
+    }
+    &-subtitle {
+        max-width: 520px;
+        margin-top: 20px;
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 1.25em;
+        color: var(--clr-accent-100);
+    }
+    &-text {
+        margin-top: 62px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.2em;
+        color: var(--clr-neutral-100);
+    }
+    &-btn {
+        margin-top: 60px;
+    }
+}

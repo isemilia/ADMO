@@ -29,6 +29,9 @@
                 left: 50%;
                 transform: translate(-50%, -50%);
                 max-width: clamp(410px, 36vw, 476px);
+                @media (max-width: 767px) {
+                    max-width: 100%;
+                }
             }
         }
         &::before {
@@ -76,7 +79,7 @@
 @media (max-width: 1023px) {
     .hero {
         padding: 50px 0;
-        background-size: 60%;
+        background-size: 80%;
         &-wrap {
             display: flex;
             flex-direction: column;
@@ -84,18 +87,6 @@
         }
         &-img {
             margin-top: 50px;
-        }
-    }
-}
-
-@media (max-width: 767px) {
-    .hero {
-        &-img {
-            &-main {
-                img {
-                    max-width: 100%;
-                }
-            }
         }
     }
 }

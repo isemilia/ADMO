@@ -1,0 +1,24 @@
+.container {
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+*, *::after, *::before {
+    font-family: var(--ff-100);
+}
+
+.ghost-btn {
+    font-family: var(--ff-100);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.2em;
+    color: var(--clr-neutral-200);
+    border: 2px solid var(--clr-neutral-200);
+    border-radius: 5px;
+    padding: 0.625em 2.625em;
+    transition: all .3s;
+    &:hover {
+        border-color: transparent;
+    }
+}

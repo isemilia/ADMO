@@ -1,6 +1,5 @@
 .tool {
     padding: 200px 0 100px;
-    overflow: hidden;
     // background: url('../img/tool-bg.png') left center / contain no-repeat;
     &-row {
         display: flex;
@@ -60,6 +59,7 @@
 @media (max-width: 975px) {
     .tool {
         padding: 110px 0;
+        overflow: hidden;
         &-row {
             flex-direction: column-reverse;
         }

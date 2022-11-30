@@ -1,0 +1,75 @@
+.compare {
+    padding: 80px 0;
+    &-row {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    &-elem {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: -110px;
+        --size: 186px;
+        width: var(--size);
+        height: var(--size);
+        background: linear-gradient(135deg, #FFFFFF 16.65%, #F9F9F9 100%);
+        display: grid;
+        place-content: center;
+        border-radius: 100%;
+        z-index: 100;
+    }
+    &-item {
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0px 10px 14px rgba(208, 208, 251, 0.3);
+        border-radius: 20px;
+        padding: 60px 50px;
+        position: relative;
+        height: max-content;
+        min-height: 270px;
+        &-title {
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 90.65%;
+            span {
+                font-family: var(--ff-200);
+            }
+        }
+        &--white {
+            align-items: flex-end;
+            color: var(--clr-neutral-100);
+            background-color: var(--clr-neutral-200);
+            .compare-item-behind {
+                position: absolute;
+                z-index: -1;
+                bottom: -120px;
+                left: 40px;
+            }
+        }
+        &--blue {
+            background: linear-gradient(130.86deg, #787AF2 6.65%, #36E19F 103.88%);
+            color: var(--clr-neutral-200);
+            .compare-item-device {
+                background-image: url('../img/overview-device.png');
+                background-size: 100% 100%;
+                background-repeat: no-repeat;
+                padding: 16px;
+                max-width: 240px;
+                display: grid;
+                place-content: center;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: -35px;
+                z-index: 10;
+            }
+        }
+        &-text {
+            margin-top: 43px;
+            font-size: 16px;
+            line-height: 90.65%;
+        }
+    }
+}

@@ -100,18 +100,18 @@
         }
     }
     &-slide {
-        transform: scale(.8);
-        &--active {
-        }
-        &:not(.overview-slide--active) {
-            .overview-item {
-                &-img {
-                    transform: scale(.6);
-                }
-                &-body {
-                    visibility: hidden;
-                    opacity: 0;
-                    transform: scale(.6);
+        @media (min-width: 768px) {
+            transform: scale(.8);
+            &:not(.overview-slide--active) {
+                .overview-item {
+                    &-img {
+                        transform: scale(.6);
+                    }
+                    &-body {
+                        visibility: hidden;
+                        opacity: 0;
+                        transform: scale(.6);
+                    }
                 }
             }
         }

@@ -4,6 +4,7 @@ window.addEventListener('DOMContentLoaded', () => {
         slidesPerView: 1,
         centeredSlides: true,
         slideActiveClass: 'overview-slide--active',
+        spaceBetween: 20,
         breakpoints: {
             768: {
                 slidesPerView: 3,

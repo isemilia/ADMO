@@ -1,6 +1,7 @@
 .plan {
     padding: 80px 0;
     position: relative;
+    overflow: hidden;
     &::after {
         content: '';
         position: absolute;
@@ -50,13 +51,13 @@
         z-index: 1;
         &-title {
             font-weight: 750;
-            font-size: 32px;
+            font-size: clamp(24px, 3vw, 32px);
             line-height: 90.65%;
-            text-align: center;
+            // text-align: center;
         }
         &-price {
             font-weight: 400;
-            font-size: 40px;
+            font-size: clamp(32px, 4vw, 40px);
             line-height: 90.65%;
             span {
                 font-family: var(--ff-200);
@@ -69,8 +70,9 @@
         &-descr {
             margin-top: 20px;
             font-weight: 400;
-            font-size: 16px;
+            font-size: clamp(14px, 1.6vw, 16px);
             line-height: 90.65%;
+            text-align: center;
         }
         &-btn {
             display: flex;
@@ -116,6 +118,15 @@
                     z-index: -1;
                 }
             }
+        }
+    }
+}
+
+@media (max-width: 680px) {
+    .plan {
+        &-wrap {
+            grid-template-columns: 1fr;
+            gap: 30px;
         }
     }
 }

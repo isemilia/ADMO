@@ -126,7 +126,7 @@
     display: inline-block;
     font-style: normal;
     font-weight: 700;
-    font-size: 16px;
+    font-size: clamp(14px, 1.6vw, 16px);
     line-height: 1.2em;
     color: var(--clr-neutral-200);
     background: var(--clr-accent-100);

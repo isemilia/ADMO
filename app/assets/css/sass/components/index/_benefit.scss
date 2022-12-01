@@ -1,0 +1,108 @@
+.benefit {
+    padding: 80px 0;
+    overflow: hidden;
+    &-title {
+        color: var(--clr-accent-200);
+        max-width: 12.5em;
+        line-height: 1.225em;
+    }
+    &-row {
+        display: grid;
+        grid-template-columns: minmax(300px, 500px) 400px;
+        place-content: center;
+        place-items: center;
+        column-gap: 80px;
+    }
+    &-list {
+        &-item {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 1.2em;
+            color: var(--clr-neutral-100);
+            display: flex;
+            align-items: center;
+            gap: 0.875em;
+            --icon-size: 42px;
+            img {
+                width: var(--icon-size);
+                height: var(--icon-size);
+                object-fit: contain;
+            }
+            &:not(:first-child) {
+                margin-top: 1.875em;
+            }
+        }
+    }
+    &-img {
+        position: relative;
+        width: 333px;
+        height: 449px;
+        &-caption {
+            position: absolute;
+            top: 60px;
+            right: -110px;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 1.2em;
+            color: var(--clr-neutral-100);
+            padding: 1.5em 1.625em;
+            background-color: var(--clr-neutral-200);
+            box-shadow: 0px 11.2462px 15.7446px rgba(208, 208, 251, 0.3);
+            border-radius: 22px;
+            &::after {
+                content: '';
+                vertical-align: bottom;
+                margin-left: 10px;
+                background-image: url("data:image/svg+xml,%3Csvg width='28' height='28' viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_80_2662)'%3E%3Cpath d='M17.875 10C17.1788 10 16.5111 10.1229 16.0188 10.3417C15.5266 10.5605 15.25 10.8572 15.25 11.1667V24C15.25 24.3094 15.5266 24.6062 16.0188 24.825C16.5111 25.0437 17.1788 25.1667 17.875 25.1667C18.5712 25.1667 19.2389 25.0437 19.7312 24.825C20.2234 24.6062 20.5 24.3094 20.5 24V11.1667C20.5 10.8572 20.2234 10.5605 19.7312 10.3417C19.2389 10.1229 18.5712 10 17.875 10Z' fill='%2336E19F'/%3E%3Cpath d='M25.125 5C24.4288 5 23.7611 5.12292 23.2688 5.34171C22.7766 5.5605 22.5 5.85725 22.5 6.16667V23.6667C22.5 23.9761 22.7766 24.2728 23.2688 24.4916C23.7611 24.7104 24.4288 24.8333 25.125 24.8333C25.8212 24.8333 26.4889 24.7104 26.9812 24.4916C27.4734 24.2728 27.75 23.9761 27.75 23.6667V6.16667C27.75 5.85725 27.4734 5.5605 26.9812 5.34171C26.4889 5.12292 25.8212 5 25.125 5Z' fill='%2336E19F'/%3E%3Cpath d='M10.625 15C9.92881 15 9.26113 15.1229 8.76885 15.3417C8.27656 15.5605 8 15.8572 8 16.1667V24.3333C8 24.6428 8.27656 24.9395 8.76885 25.1583C9.26113 25.3771 9.92881 25.5 10.625 25.5C11.3212 25.5 11.9889 25.3771 12.4812 25.1583C12.9734 24.9395 13.25 24.6428 13.25 24.3333V16.1667C13.25 15.8572 12.9734 15.5605 12.4812 15.3417C11.9889 15.1229 11.3212 15 10.625 15Z' fill='%2336E19F'/%3E%3Cpath d='M3.5 20C2.83696 20 2.20107 20.0585 1.73223 20.1627C1.26339 20.2669 1 20.4082 1 20.5556V24.4444C1 24.5918 1.26339 24.7331 1.73223 24.8373C2.20107 24.9415 2.83696 25 3.5 25C4.16304 25 4.79893 24.9415 5.26777 24.8373C5.73661 24.7331 6 24.5918 6 24.4444V20.5556C6 20.4082 5.73661 20.2669 5.26777 20.1627C4.79893 20.0585 4.16304 20 3.5 20Z' fill='%2336E19F'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_80_2662'%3E%3Crect width='28' height='28' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+                --size: 1.75em;
+                width: var(--size);
+                height: var(--size);
+                background-repeat: no-repeat;
+                background-size: contain;
+                display: inline-block;
+            }
+            &::before {
+                content: '';
+                background-image: url('../img/benefit-elems.png');
+                display: block;
+                width: 174px;
+                height: 277px;
+                position: absolute;
+                right: -60px;
+                top: -77px;
+            }
+        }
+        &::before {
+            content: '';
+            background-color: var(--clr-accent-100);
+            width: 100%;
+            height: 100%;
+            display: block;
+            border-radius: 20px;
+        }
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 20px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: rotate(-7.5deg);
+        }
+    }
+}
+
+@media (max-width: 1023px) {
+    .benefit {
+        &-row {
+            gap: 0;
+        }
+        &-img {
+            &-caption {
+                top: 20px;
+                right: -30px;
+            }
+        }
+    }
+}

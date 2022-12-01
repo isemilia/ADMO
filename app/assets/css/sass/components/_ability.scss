@@ -6,6 +6,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 25px;
         }
         &-subtitle {
             text-align: right;
@@ -52,6 +53,75 @@
         border-right-width: 18px;
         img {
             border-radius: 10px;
+        }
+    }
+}
+
+@media (max-width: 1439px) {
+    .ability {
+        &-collage {
+            margin-right: 60px;
+            &-main {
+                max-width: 450px;
+            }
+        }
+        &-collage {
+            &-top, &-bottom {
+                width: 140%;
+            }
+        }
+    }
+}
+
+@media (max-width: 1289px) {
+    .ability {
+        &-device {
+            max-width: 220px;
+            border-width: 14px;
+        }
+    }
+}
+
+@media (max-width: 1023px) {
+    .ability {
+        &-img {
+            max-width: clamp(240px,31vw,310px);
+        }
+        &-collage {
+            &-main {
+                max-width: clamp(400px, 45vw, 450px);
+            }
+            &-top, &-bottom {
+                width: 136%;
+            }
+        }
+        &-device {
+            max-width: clamp(180px, 22vw, 220px);
+            border-width: 6px;
+        }
+    }
+}
+@media (max-width: 767px) {
+    .ability {
+        &-subtitle {
+            margin-top: 25px;
+        }
+        &-row {
+            position: relative;
+            flex-direction: column;
+            padding-top: 100px;
+        }
+        &-collage {
+            margin: 0;
+            &-top, &-bottom {
+                width: 100%;
+                position: relative;
+            }
+        }
+        &-img {
+            max-width: 400px;
+            position: absolute;
+            top: -50px;
         }
     }
 }

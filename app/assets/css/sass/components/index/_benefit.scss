@@ -35,7 +35,8 @@
     }
     &-img {
         position: relative;
-        width: 333px;
+        width: 100%;
+        max-width: 333px;
         height: 449px;
         &-caption {
             position: absolute;
@@ -103,6 +104,19 @@
                 top: 20px;
                 right: -30px;
             }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .benefit {
+        &-row {
+            margin-top: 40px;
+            grid-template-columns: 1fr;
+            row-gap: 40px;
+        }
+        &-img {
+            height: clamp(300px, 110vw, 450px);
         }
     }
 }

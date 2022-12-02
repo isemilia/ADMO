@@ -1,0 +1,88 @@
+.faq {
+    padding: 170px 0 110px;
+    position: relative;
+    z-index: 1;
+    background-color: var(--clr-neutral-300);
+    &-wrap {
+        margin-top: 70px;
+        @media (max-width: 575px) {
+            margin-top: 40px;
+        }
+    }
+    &-item {
+        background-color: var(--clr-neutral-200);
+        border-radius: 20px;
+        &:not(:first-child) {
+            margin-top: 25px;
+            @media (max-width: 575px) {
+                margin-top: 20px;
+            }
+        }
+        // overflow: hidden;
+        &--active {
+            .faq-item-head {
+                &::after {
+                    transform: rotate(45deg) translateY(-50%); 
+                    // top: 34%;
+                }
+            }
+        }
+        &-head {
+            cursor: pointer;
+            padding: 30px;
+            padding-right: 60px;
+            --close-size: 25px;
+            @media (max-width: 575px) {
+                --close-size: 20px;
+                padding: 20px;
+                padding-right: 40px;
+            }
+            position: relative;
+            &::after {
+                content: '';
+                width: var(--close-size);
+                height: var(--close-size);
+                display: block;
+                background-position: center center;
+                background-size: contain;
+                background-repeat: no-repeat;
+                position: absolute;
+                right: 35px;
+                top: 50%;
+                transform-origin: center top;
+                transform: rotate(180deg) translateY(-50%);
+                @media (max-width: 575px) {
+                    right: 15px;
+                }
+                transition: all .3s;
+                background-image: url("data:image/svg+xml,%3Csvg width='27' height='27' viewBox='0 0 27 27' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M24 11.9999H15V2.99986C15 2.58546 15.293 1.29289 15 0.999862C14.707 0.706837 14.4144 0.999862 14 0.999862C13.5856 0.999862 12.293 0.706837 12 0.999862C11.707 1.29289 12 2.58546 12 2.99986V11.9999H2.99998C2.58558 11.9999 1.29301 11.7068 0.999985 11.9999C0.706959 12.2929 0.999985 13.5855 0.999985 13.9999C0.999985 14.4143 0.706959 14.7068 0.999985 14.9999C1.29301 15.2929 2.58558 14.9999 2.99998 14.9999H12V23.9999C12 24.4143 11.707 25.7068 12 25.9999C12.293 26.2929 13.5856 25.9999 14 25.9999C14.4144 25.9999 14.707 26.2929 15 25.9999C15.293 25.7068 15 24.4143 15 23.9999V14.9999H24C24.4144 14.9999 25.707 15.2929 26 14.9999C26.293 14.7068 26 14.4143 26 13.9999C26 13.5855 26.293 12.2929 26 11.9999C25.707 11.7068 24.4144 11.9999 24 11.9999Z' fill='%2336E19F'/%3E%3C/svg%3E%0A");
+            }
+        }
+        &-title {
+            font-weight: 700;
+            font-size: clamp(14px, 2vw, 22px);
+            line-height: 1.25em;
+            color: var(--clr-accent-100);
+        }
+        &-body {
+            // max-height: 0;
+            overflow: hidden;
+            transition: all .5s;
+        }
+        &-text {
+            padding: 0 30px 30px;
+            max-width: 800px;
+            font-weight: 450;
+            font-size: clamp(12px, 2vw, 16px);
+            line-height: 1.2em;
+            color: var(--clr-neutral-100);
+            @media (max-width: 575px) {
+                padding: 0 20px 20px;
+            }
+            a {
+                text-decoration-line: underline;
+                color: var(--clr-accent-200);
+            }
+        }
+    }
+}

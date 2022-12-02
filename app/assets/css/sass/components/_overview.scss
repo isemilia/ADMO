@@ -47,6 +47,9 @@
             transform: scale(1);
             transform-origin: bottom center;
             transition: all .3s;
+            @media (max-width: 575px) {
+                max-width: 80%;
+            }
             img {
                 border-radius: 20px; //380x240
                 max-height: 230px;

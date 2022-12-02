@@ -146,6 +146,30 @@
     }
 }
 
+/* @media (max-width: 999px) {
+    .purpose {
+        background-image: url('../img/purpose-bg-mob.png');
+        background-position: center bottom;
+        &-circle {
+            inset: unset;
+        }
+        &-gallery {
+            position: static;
+            display: grid;
+        }
+        &-img {
+            margin: 0;
+            &--03 {
+                grid-row: 1;
+            }
+            &--04 {
+                grid-row: 2;
+            }
+        }
+    }
+} */
+
+
 @media (max-width: 980px) {
     .purpose {
         &-gallery {
@@ -188,3 +212,4 @@
         }
     }
 }
+

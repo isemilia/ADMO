@@ -1,7 +1,8 @@
 .plan-info {
     padding: 80px 0;
-    --first-cell-pl: 100px;
+    --first-cell-pl: clamp(20px, 6vw, 100px);
     --first-cell-mxw: 250px;
+    --check-size: 3.25em;
     &-table {
         margin-top: 80px;
         border-collapse: collapse;
@@ -9,11 +10,11 @@
     }
     &-heading {
         font-weight: 700;
-        font-size: 20px;
+        font-size: clamp(14px, 2vw, 20px);
         line-height: 90.65%;
         color: var(--clr-accent-100);
         text-align: center;
-        padding: 25px 0;
+        padding: 25px;
         &:first-child {
             text-align: left;
             padding-left: var(--first-cell-pl);
@@ -22,7 +23,7 @@
     }
     &-cell {
         font-weight: 700;
-        font-size: 16px;
+        font-size: clamp(14px, 1.6vw, 16px);
         line-height: 1.2em;
         color: var(--clr-neutral-100);
         padding: 10px 0;
@@ -34,13 +35,12 @@
             position: relative;
             &::before {
                 content: '';
-                --size: 3.25em;
                 display: inline-block;
                 background-position: center center;
                 background-size: contain;
                 background-repeat: no-repeat;
-                width: var(--size);
-                height: var(--size);
+                width: var(--check-size);
+                height: var(--check-size);
                 position: relative;
                 left: 50%;
                 transform: translateX(-50%);
@@ -66,4 +66,59 @@
         left: 50%;
         transform: translateX(-50%);
     }
+}
+
+@media (max-width: 729px) {
+    .plan-info {
+        &-table {
+            margin-top: 40px;
+        }
+        &-heading {
+            &:first-child {
+                display: none;
+            }
+        }
+        &-row {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            justify-items: center;
+            position: relative;
+            border-bottom: 0;
+            &:not(:first-child) {
+                margin-top: 35px;
+            }
+            &::before {
+                position: absolute;
+                content: '';
+                width: 1px;
+                height: calc(var(--check-size) + 12px);
+                background-color: #D0D0FB;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            &::after {
+                position: absolute;
+                content: '';
+                width: 100%;
+                height: 1px;
+                background-color: #D0D0FB;
+                bottom: calc(var(--check-size) + 12px);
+                left: 0;
+            }
+            &--head {
+                margin: 0;
+                &::before, &::after {
+                    all: unset;
+                }
+            }
+        }
+        &-cell {
+            text-align: center;
+            &:first-child {
+                padding: 15px 0;
+                grid-column: 1/-1;
+            }
+        }
+    }  
 }

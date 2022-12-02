@@ -1,0 +1,32 @@
+.platform {
+    padding: 80px 0;
+    &-title {
+        img {
+            display: inline-block;
+            max-width: 3.5em;
+        }
+    }
+    &-subtitle {
+        max-width: 520px;
+        margin-top: 20px;
+        font-weight: 700;
+        font-size: clamp(16px, 1.8vw, 22px);
+        line-height: 1.25em;
+        color: var(--clr-accent-100);
+    }
+    &-wrap {
+        margin-top: clamp(40px, 5vw, 50px);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 14px;
+        @media (max-width: 1023px) {
+            gap: 5px clamp(5px, 2vw, 20px);
+        }
+    }
+    &-img {
+        max-width: clamp(152px, 16.5vw, 225px);
+        padding: 16px;
+    }
+}

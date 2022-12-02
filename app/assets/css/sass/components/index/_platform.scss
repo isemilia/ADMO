@@ -1,5 +1,8 @@
 .platform {
     padding: 80px 0;
+    @media (max-width: 767px) {
+        padding: 50px 0;
+    }
     &-title {
         img {
             display: inline-block;

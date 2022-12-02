@@ -10,7 +10,6 @@ window.addEventListener('DOMContentLoaded', () => {
         });
 
         window.addEventListener('click', function(e) {
-            console.log(e.target);
             if (e.target != menu && e.target !=trigger && menu.classList.contains(menuActiveClass)) {
                 menu.classList.remove(menuActiveClass);
                 trigger.classList.remove(triggerActiveClass);

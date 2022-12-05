@@ -103,6 +103,10 @@
 }
 @media (max-width: 767px) {
     .ability {
+        padding: 40px 0;
+        &-title {
+            font-size: 26px;
+        }
         &-subtitle {
             margin-top: 25px;
         }

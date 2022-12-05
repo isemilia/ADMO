@@ -110,6 +110,10 @@
 
 @media (max-width: 767px) {
     .benefit {
+        padding: 40px 0;
+        &-title {
+            font-size: 26px;
+        }
         &-row {
             margin-top: 40px;
             grid-template-columns: 1fr;
@@ -117,6 +121,9 @@
         }
         &-img {
             height: clamp(300px, 110vw, 450px);
+        }
+        &-title {
+            font-size: 26px;
         }
     }
 }

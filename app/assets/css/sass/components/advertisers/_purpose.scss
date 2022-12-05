@@ -1,0 +1,98 @@
+.purpose {
+    padding: 80px 0;
+    background-image: url('../img/advertisers/purpose-bg.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 870px;
+    &-title {
+        max-width: 724px;
+        line-height: 1.25em;
+    }
+    &-wrap {
+        position: relative;
+        z-index: 1;
+        // display: flex;
+        // flex-wrap: wrap;
+        // gap: 100px;
+    }
+    &-item {
+        position: absolute;
+        &-img {
+            img {
+                border-radius: 18px;
+            }
+        }
+        &-title {
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 1.2em;
+        }
+        &-text {
+            margin-top: 2px;
+            font-weight: 450;
+            font-size: 14px;
+            line-height: 1.2em;
+        }
+        &-label {
+            background: var(--clr-accent-100);
+            border-radius: 18px;
+            padding: 12px 25px;
+            color: var(--clr-neutral-200);
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+        }
+        &--01 {
+            top: 60px;
+            left: 373px;
+            .purpose-item-label {
+                width: 330px;
+                top: 26px;
+                left: -196px;
+                z-index: -1;
+                * {
+                    max-width: 150px;
+                }
+            }
+        }
+        &--02 {
+            top: 280px;
+            left: 50px;
+            .purpose-item-label {
+                width: 254px;
+                min-height: 183px;
+                justify-content: flex-end;
+                // top: 31px;
+                bottom: -65px;
+                z-index: -1;
+            }
+        }
+        &--03 {
+            top: 23px;
+            right: 50px;
+            .purpose-item-label {
+                min-height: 210px;
+                width: 280px;
+                justify-content: flex-end;
+                bottom: -74px;
+                z-index: -1;
+            }
+        }
+        &--04 {
+            top: 238px;
+            right: 354px;
+            .purpose-item-label {
+                align-items: flex-end;
+                justify-content: center;
+                width: 190px;
+                min-height: 75px;
+                bottom: 34px;
+                left: 74px;
+                z-index: -1;
+                * {
+                    max-width: 50px;
+                }
+            }
+        }
+    }
+}

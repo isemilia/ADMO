@@ -5,7 +5,7 @@ window.addEventListener('DOMContentLoaded', () => {
     ['resize', 'DOMContentLoaded', 'load'].forEach(event => {
         window.addEventListener(event, () => {
             if (window.innerWidth < 1010) {
-                compareItems[1].insertAdjacentElement('afterbegin', compareElem);
+                compareItems[1].insertAdjacentElement('beforebegin', compareElem);
             }
         });
     });

@@ -45,7 +45,7 @@
             background-color: var(--clr-neutral-200);
             .compare-item-behind {
                 position: absolute;
-                z-index: -1;
+                // z-index: -1;
                 bottom: -120px;
                 left: 40px;
             }
@@ -89,17 +89,32 @@
         &-elem {
             --size: 100px;
             padding: 20px;
-            top: -60px;
-            left: 0px;
+            inset: unset;
+            position: static;
+            margin: 0 auto;
         }
         &-item {
+            align-items: flex-start;
             &--blue {
+                padding-bottom: 100px;
+                margin-bottom: 60px;
                 .compare-item-device {
-                    position: relative;
                     inset: unset;
                     transform: unset;
-                    margin: 0 auto;
-                    margin-top: 20px;
+                    bottom: -80px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    min-width: 208px;
+                    padding: 10px;
+                }
+            }
+            &--white {
+                margin-top: 120px;
+                .compare-item-behind {
+                    z-index: -1;
+                    top: -170px;
+                    left: 50%;
+                    transform: translateX(-50%);
                 }
             }
         }
@@ -109,7 +124,6 @@
 @media (max-width: 575px) {
     .compare {
         &-item {
-            align-items: flex-start;
             min-height: 190px;
             &-text {
                 font-size: 14px;

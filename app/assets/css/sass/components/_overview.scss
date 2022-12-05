@@ -79,6 +79,9 @@
             transform: scale(1);
             transform-origin: bottom center;
             transition: all .3s;
+            &.mxw-100 {
+                max-width: 100%;
+            }
         }
     }
     &-swiper {

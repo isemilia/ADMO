@@ -1,13 +1,33 @@
 .benefits {
     padding: 80px 0;
     background: linear-gradient(to top, var(--clr-accent-100) 60%, #FFF 40%);
+    @media (max-width: 767px) {
+        background: var(--clr-accent-100);
+    }
     &-row {
         margin-top: 110px;
+        @media (max-width: 767px) {
+            margin-top: 60px;
+        }
         display: flex;
         justify-content: space-between;
+        row-gap: 50px;
+        flex-wrap: wrap;
+        @media (max-width: 575px) {
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+        @media (max-width: 1119px) {
+            justify-content: space-around;
+            column-gap: 30px;
+        }
     }
     &-item {
         max-width: 260px;
+        @media (max-width: 575px) {
+            max-width: 80%;
+         }
         &-text {
             margin-top: -38px;
             position: relative;
@@ -19,6 +39,10 @@
             line-height: 1.2em;
             color: var(--clr-neutral-100);
             padding: 15px 13px 14px 15px;
+            @media (max-width: 575px) {
+               transform: translateX(48px);
+               text-align: center;
+            }
         }
         &-icon {
             --icon-size: 60px;
@@ -38,11 +62,13 @@
                 height: 100%;
                 object-fit: cover;
             }
-            &--shadow-100 {
-                box-shadow: 0 -30px 60px 0px rgba(54, 225, 159, .3);
-            }
-            &--shadow-200 {
-                box-shadow: 0 -30px 60px 0px rgba(149, 151, 242, .5);
+            @media (min-width: 768px) {
+                &--shadow-100 {
+                    box-shadow: 0 -30px 60px 0px rgba(54, 225, 159, .3);
+                }
+                &--shadow-200 {
+                    box-shadow: 0 -30px 60px 0px rgba(149, 151, 242, .5);
+                }
             }
         }
     }
@@ -52,5 +78,10 @@
         display: block;
         max-width: fit-content;
         color: var(--clr-accent-100);
+    }
+    &-title {
+        @media (max-width: 767px) {
+            color: var(--clr-neutral-200);
+        }
     }
 }

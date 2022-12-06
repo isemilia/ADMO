@@ -146,30 +146,97 @@
     }
 }
 
-/* @media (max-width: 999px) {
+@media (max-width: 999px) {
     .purpose {
         background-image: url('../img/purpose-bg-mob.png');
         background-position: center bottom;
         &-circle {
             inset: unset;
+            &--01 {
+                --circle-size: 115px;
+                top: 146px;
+                right: 5px;
+            }
+            &--02 {
+                --circle-size: 98px;
+                left: 48px;
+                top: 425px;
+            }
+            &--03 {
+                --circle-size: 96px;
+                right: 15px;
+                bottom: 60px;
+            }
+            &--04 {
+                --circle-size: 96px;
+                top: 15px;
+                right: 190px;
+                z-index: 2;
+            }
+            &--05 {
+                --circle-size: 60px;
+                top: 280px;
+                right: 100px;
+                z-index: 2;
+            }
+            &--06 {
+                --circle-size: 110px;
+                bottom: -50px;
+                left: 120px;
+                z-index: 2;
+            }
+            &--07 {
+                --circle-size: 100px;
+                top: 295px;
+                left: 84px;
+                z-index: 2;
+            }
         }
         &-gallery {
             position: static;
-            display: grid;
+        }
+        &-wrap {
+            min-height: 666px;
         }
         &-img {
             margin: 0;
+            position: absolute;
+            &--01 {
+                top: 290px;
+                right: 0;
+                max-width: 122px;
+            }
+            &--02 {
+                max-width: 206px;
+                bottom: 0;
+                left: 20px;
+            }
             &--03 {
+                top: 0;
+                right: 56px;
                 grid-row: 1;
+                max-width: 185px;
             }
             &--04 {
+                top: 155px;
+                left: 35px;
                 grid-row: 2;
+                max-width: 120px;
             }
         }
     }
-} */
+}
 
+@media (max-width: 575px) {
+    .purpose {
+        &-circle {
+            font-size: 11px;
+            padding: 0 12px;
+        }
+    }
+}
 
+/* 
 @media (max-width: 980px) {
     .purpose {
         &-gallery {
@@ -213,3 +280,4 @@
     }
 }
 
+ */

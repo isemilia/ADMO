@@ -1,0 +1,104 @@
+.tool {
+    padding: 80px 0;
+    @media (max-width: 1023px) {
+        padding: 60px 0;
+    }
+    --bg-size: clamp(327px, 46vw, 674px);
+    &-row {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        @media (max-width: 767px) {
+            align-items: center;
+        }
+        @media (min-width: 768px) {
+            padding-bottom: calc(var(--bg-size) / 2.49);
+        }
+    }
+    &-block {
+        max-width: 620px;
+        @media (min-width: 768px) {
+            padding: 45px 75px 30px 42px;
+            border-radius: 22px;
+            background-color: var(--clr-neutral-200);
+            box-shadow: 0px -10px 14px rgba(208, 208, 251, 0.3), 0px 10px 14px rgba(208, 208, 251, 0.3);
+        }
+    }
+    &-title {
+        line-height: 1.25em;
+        @media (max-width: 575px) {
+            font-size: 26px;
+        }
+    }
+    &-subtitle {
+        margin-top: 1.1em;
+        font-weight: 700;
+        font-size: clamp(16px, 2vw, 22px);
+        line-height: 1.25em;
+        color: var(--clr-accent-200);
+        @media (min-width: 1024px) {
+            color: var(--clr-accent-100);
+            &.line {
+                padding: unset;
+                &::before {
+                    display: none;
+                }
+            }
+        }
+    }
+    &-btn {
+        margin-top: 60px;
+        min-width: 21.25em;
+        @media (max-width: 767px) {
+            margin-top: 35px;
+        }
+    }
+    &-img {
+        @media (min-width: 768px) {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: -1;
+        }
+        @media (max-width: 767px) {
+            margin-top: 35px;
+        }
+        width: var(--bg-size);
+        height: var(--bg-size);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center;
+        background-image: url('../img/advertisers/tool-bg.png');
+        display: grid;
+        place-content: center;
+        padding: 0 calc(var(--bg-size) / 5);
+        @media (max-width: 767px) {
+            padding: 0 calc(var(--bg-size) / 4);
+        }
+    }
+    &-device {
+        background-image: url('../img/overview-device.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        padding: 14px;
+        max-width: 300px;
+        width: fit-content;
+        display: grid;
+        place-content: center;
+        border-radius: 22px;
+        position: relative;
+        left: -12px;
+        top: 15px;
+        @media (max-width: 767px) {
+            padding: 8px;
+            border-radius: 8px;
+            left: -4px;
+            top: 10px;
+        }
+        img {
+            border-radius: 10px;
+        }
+    }
+}

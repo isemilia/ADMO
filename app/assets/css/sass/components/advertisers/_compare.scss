@@ -1,5 +1,8 @@
 .compare {
     padding: 100px 0;
+    @media (max-width: 1023px) {
+        padding: 50px 0;
+    }
     &-row {
         position: relative;
         display: grid;

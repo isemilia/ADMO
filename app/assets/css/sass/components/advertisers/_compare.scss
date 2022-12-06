@@ -32,6 +32,9 @@
                  300px;
         position: relative;
         height: max-content;
+        @media (min-width: 1024px) {
+            min-height: 760px;
+        }
         &-title {
             font-weight: 700;
             font-size: 24px;

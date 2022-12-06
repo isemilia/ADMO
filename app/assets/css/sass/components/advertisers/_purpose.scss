@@ -234,6 +234,9 @@
 
 @media (max-width: 575px) {
     .purpose {
+        background-image: url('../img/advertisers/purpose-bg-mob.svg');
+        background-size: cover;
+        min-height: auto;
         &-item {
             &--01 {
                 .purpose-item-img {

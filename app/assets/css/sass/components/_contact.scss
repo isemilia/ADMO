@@ -7,7 +7,7 @@
         align-items: center;
     }
     &-circle {
-        --circle-size: clamp(285px, 35vw, 406px);
+        --circle-size: clamp(235px, 35vw, 406px);
         color: var(--clr-neutral-200);
         font-weight: 700;
         background-color: var(--clr-accent-100);

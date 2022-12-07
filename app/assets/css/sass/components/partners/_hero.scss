@@ -1,4 +1,23 @@
 .hero {
+    padding: clamp(100px, 20vw, 200px) 0 80px;
+    &::before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 777px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: right top;
+        background-image: url('../img/partners/hero-bg.svg');
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        @media (max-width: 575px) {
+            background-image: url('../img/partners/hero-bg-mob.png');
+            height: 415px;
+        }
+    }
     &-title {
         max-width: 606px;
         line-height: 1.25em;

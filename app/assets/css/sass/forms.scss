@@ -1,0 +1,98 @@
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+
+@import 'abstracts/fonts'; 
+
+@import 'components/global';
+
+@import 'components/popup';
+
+.form {
+    background: var(--clr-neutral-400);
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-content: center;
+    &-title {
+        margin: 0;
+        font-weight: 900;
+        font-size: 32px;
+        line-height: 1.2em;
+        color: var(--clr-neutral-100);
+        @media (max-width: 767px) {
+            font-size: clamp(22px, 4vw, 32px);
+        }
+    }
+    &-subtitle {
+        margin-top: .9em;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 1.2em;
+        color: var(--clr-neutral-100);
+        @media (max-width: 767px) {
+            font-size: clamp(14px, 2vw, 18px);
+        }
+    }
+    &-title, &-subtitle {
+        text-align: center;
+    }
+    &-block {
+        cursor: auto;
+        background: var(--clr-neutral-200);
+        border-radius: 20px;
+        max-width: 980px;
+        padding: 50px 40px 45px;
+        position: relative;
+        max-height: 80vh;
+        overflow: auto;
+        @media (max-width: 1023px) {
+            max-width: 80vw;
+        }
+        @media (max-width: 767px) {
+            padding: 30px 20px;
+        }
+    }
+    &-wrap {
+        position: relative;
+    }
+    &-text {
+        margin-top: 20px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.2em;
+        text-align: center;
+        color: var(--clr-neutral-100);
+        a {
+            color: var(--clr-accent-200);
+            text-underline-offset: 2px;
+        }
+    }
+    &-btn {
+        margin: 0 auto;
+        display: block;
+        max-width: fit-content;
+        @media (min-width: 1024px) {
+            min-width: 21em;
+        }
+    }
+    &-options {
+        margin-top: 40px;
+        hr {
+            margin: clamp(10px, 3vw, 25px) 0;
+            border-color: rgba(208, 208, 251, 0.5);
+        }
+    }
+    &-google {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: clamp(14px, 2vw, 18px);
+        line-height: 1em;
+        color: var(--clr-neutral-100);
+        text-decoration: none;
+        img {
+            margin-right: .5em;
+        }
+    }
+}

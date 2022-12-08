@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADMO</title>
+
+    <link rel="stylesheet" href="assets/css/reset.min.css">
+    <link rel="stylesheet" href="assets/css/forms.min.css">
+</head>
+<body>
+    <div class="form">
+        <div class="form-wrap">
+            <div class="form-block">
+                <div class="form-main">
+                    <h2 class="form-title">Вход в Личный кабинет</h2>
+                    <form class="contact-form">
+                        <div class="contact-form-wrap contact-form-wrap--column">
+                            <label class="label required">
+                                <span>Электронная почта</span>
+                                <input class="input-text" required type="text" name="company" placeholder="yourmail@gmail.com">
+                                <span class="wpcf7-not-valid-tip">Введите данные</span>
+                            </label>
+                            <label class="label required">
+                                <span>Пароль</span>
+                                <input class="input-text" required type="text" name="city" placeholder="ваш пароль">
+                            </label>
+                        </div>
+                        <div class="contact-form-invalid-tip hidden">Ой, вы забыли ввести пароль.</div>
+                        <input type="submit" value="Вход" class="btn contact-form-submit">
+                    </form>
+
+                    <div class="form-text">
+                        <a href="#">Забыли пароль?</a>
+                    </div>
+                    <div class="form-options">
+                        <a href="#" class="form-google">
+                            <img src="assets/img/icons/google.svg" alt="">
+                            <span>Вход через Google</span>
+                        </a>
+                        <hr>
+                        <a href="#" class="btn btn--green form-btn">Регистрация</a>
+                    </div>
+                </div>
+        
+                <!-- уведомление -->
+                <div class="notif hidden">
+                    <h2 class="notif-title">Заявка на партнёрство</h2>
+                    <div class="notif-text">Спасибо! Ваша заявка принята, наш менеджер свяжется с Вами.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

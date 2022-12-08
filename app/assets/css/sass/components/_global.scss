@@ -129,6 +129,13 @@
         border: 0;
         box-shadow: 0px 10px 14px rgba(208, 208, 251, 0.3);
     }
+    &--green {
+        background: var(--clr-accent-200);
+        box-shadow: 0px 10px 14px rgba(54, 225, 159, 0.3);
+        &:hover {
+            box-shadow: 0px 5px 10px rgba(54, 225, 159, 0.65);
+        }
+    }
 }
 
 .hidden {

@@ -93,6 +93,14 @@
     @media (max-width: 767px) {
         margin-top: 30px;
     }
+    &-info {
+        max-width: 470px;
+        font-weight: 300;
+        font-size: clamp(12px, 2vw, 16px);
+        line-height: 1.2em;
+        color: var(--clr-neutral-100);
+        margin-bottom: .6em;
+    }
     &-wrap {
         &--cols {
             display: grid;

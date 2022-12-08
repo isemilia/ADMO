@@ -1,0 +1,176 @@
+.popup {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+    &-overlay {
+        background: rgba(208, 208, 251, 0.7);
+        height: 100%;
+        width: 100%;
+        max-height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: grid;
+        place-content: center;
+        cursor: pointer;
+    }
+    &-block {
+        background: var(--clr-neutral-200);
+        border-radius: 20px;
+        max-width: 980px;
+        padding: 50px 40px 45px;
+        position: relative;
+        max-height: 80vh;
+        overflow: auto;
+        @media (max-width: 1023px) {
+            max-width: 80vw;
+        }
+        @media (max-width: 767px) {
+            padding: 30px 20px;
+        }
+        &::after {
+            content: '';
+            --size: 48px;
+            height: var(--size);
+            width: var(--size);
+            display: block;
+            background-position: center center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: -65px;
+            right: -130px;
+            pointer-events: none;
+            background-image: url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_192_12776)'%3E%3Cpath d='M27 24L35 15C35.3763 14.6237 36 14.5322 36 14C36 13.4678 35.3763 13.3763 35 13C34.6238 12.6237 34.5321 12 34 12C33.468 12 33.3763 12.6237 33 13L24 21L15 13C14.6238 12.6237 14.5321 12 14 12C13.468 12 13.3763 12.6237 13 13C12.6238 13.3763 12 13.4678 12 14C12 14.5322 12.6238 14.6237 13 15L21 24L13 33C12.8128 33.1858 12.1015 32.7565 12 33C11.8986 33.2435 12 33.7362 12 34C12 34.2638 11.8986 34.7565 12 35C12.1015 35.2435 12.8128 34.8142 13 35C13.1858 35.1873 12.7566 35.8985 13 36C13.2435 36.1015 13.7363 36 14 36C14.2638 36 14.7566 36.1015 15 36C15.2435 35.8985 14.8143 35.1873 15 35L24 27L33 35C33.1858 35.1873 32.7566 35.8985 33 36C33.2435 36.1015 33.7363 36 34 36C34.2638 36 34.7566 36.1015 35 36C35.2435 35.8985 34.8143 35.1873 35 35C35.1873 34.8142 35.8986 35.2435 36 35C36.1015 34.7565 36 34.2638 36 34C36 33.7362 36.1015 33.2435 36 33C35.8986 32.7565 35.1873 33.1858 35 33L27 24Z' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_192_12776'%3E%3Crect width='48' height='48' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+        }
+    }
+    &-title {
+        margin: 0;
+        font-weight: 900;
+        font-size: 32px;
+        line-height: 1.2em;
+        color: var(--clr-neutral-100);
+        @media (max-width: 767px) {
+            font-size: clamp(24px, 4vw, 32px);
+        }
+    }
+    &-subtitle {
+        margin-top: .9em;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 1.2em;
+        color: var(--clr-neutral-100);
+        @media (max-width: 767px) {
+            font-size: clamp(14px, 2vw, 18px);
+        }
+    }
+    &-title, &-subtitle {
+        text-align: center;
+    }
+    &-form {
+        margin-top: 40px;
+        @media (max-width: 767px) {
+            margin-top: 30px;
+        }
+        &-wrap {
+            &--cols {
+                display: grid;
+                grid-template-columns: repeat(2, minmax(300px, 360px));
+                column-gap: 60px;
+                row-gap: 20px;
+                @media (max-width: 1023px) {
+                    grid-template-columns: repeat(2, 1fr);
+                    column-gap: 30px;
+                }
+                @media (max-width: 767px) {
+                    grid-template-columns: 1fr;
+                }
+            }
+        }
+        .label {
+            display: flex;
+            flex-direction: column;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 1.2em;
+            color: var(--clr-neutral-100);
+            @media (max-width: 767px) {
+                font-size: clamp(14px, 2vw, 16px);
+            }
+            &.required {
+                span:not([class]) {
+                    &::after {
+                        content: '*';
+                        color: #FF0400;
+                        margin-left: 2px;
+                    }
+                }
+            }
+        }
+        &-invalid-tip {
+            margin-top: 20px;
+            text-align: center;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 1.2em;
+            color: #FF0400;
+        }
+        .wpcf7-not-valid-tip {
+            display: none;
+            color: #FF0400;
+            font-size: .8em;
+            position: static;
+            padding: 0 .5em;
+        }
+        .input-text {
+            background: var(--clr-neutral-200);
+            border: 1px solid #D0D0FB;
+            box-shadow: 0px 10px 14px rgba(208, 208, 251, 0.3);
+            border-radius: 15px;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 1.2em;
+            color: var(--clr-neutral-100);
+            padding: 1.2em;
+            margin-top: 10px;
+            @media (max-width: 767px) {
+                padding: 1em;
+                font-size: clamp(14px, 2vw, 16px);
+            }
+            &::placeholder {
+                color: #B6B6B6;
+            }
+            &:focus {
+                outline: var(--clr-neutral-100) solid 1px;
+            }
+            &.wpcf7-not-valid {
+                border: 1px solid #FF0400;
+            }
+        }
+        &-text {
+            margin-top: 28px;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 1.2em;
+            text-align: center;
+            color: var(--clr-neutral-100);
+            a {
+                color: var(--clr-accent-200);
+                text-decoration: underline;
+                text-underline-offset: 2px;
+            }
+        }
+        &-submit {
+            margin: 30px auto 0;
+            display: block;
+            max-width: fit-content;
+            outline: 0;
+            border: 0;
+            cursor: pointer;
+            min-width: 21em;
+        }
+    }
+}

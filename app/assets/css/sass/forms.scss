@@ -45,6 +45,10 @@
         position: relative;
         max-height: 80vh;
         overflow: auto;
+        &--wide {
+            padding-left: 55px;
+            padding-right: 55px;
+        }
         @media (max-width: 1023px) {
             max-width: 82vw;
         }

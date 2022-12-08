@@ -8,19 +8,25 @@ function closeByClickOutside(popupSelector, overlaySelector, activeClass) {
     popup.addEventListener('click', (e) => {
         if(e.target.matches(overlaySelector)) {
             togglePopup(popupSelector, activeClass);
+            bodyScrollToggle();
         }
     })
 }
 
-window.addEventListener('DOMContentLoaded', () => {
-    const signUpBtns = document.querySelectorAll('[data-sign-up]');
+function bodyScrollToggle() {
+    document.body.classList.toggle('no-scroll');
+}
 
-    signUpBtns.forEach(btn => {
+window.addEventListener('DOMContentLoaded', () => {
+    const partnersBtns = document.querySelectorAll('[data-become-partners]');
+
+    partnersBtns.forEach(btn => {
         btn.addEventListener('click', (e) => {
             e.preventDefault();
-            togglePopup('#signUpPopup', 'popup--active');
+            togglePopup('#partnersPopup', 'popup--active');
+            bodyScrollToggle();
         });
     });
-    
-    closeByClickOutside('#signUpPopup', '.popup-overlay', 'popup--active');
+
+    closeByClickOutside('#partnersPopup', '.popup-overlay', 'popup--active');
 });

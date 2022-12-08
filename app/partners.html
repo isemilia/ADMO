@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ADMO</title>
+
+    <link rel="stylesheet" href="assets/css/reset.min.css">
     <link rel="stylesheet" href="assets/css/partners.min.css">
 </head>
 <body>
@@ -184,7 +186,7 @@
                     <h2 class="title program-title">Партнерская программа <span>ADMO</span></h2>
                     <div class="program-subtitle line">Для компаний, которые занимаются автоматизацией, IT-сопровождением и продажей торгового оборудования.</div>
                     <div class="program-text">Оставьте заявку, наш менеджер свяжется с вами</div>
-                    <a href="#" class="btn program-btn">Стать партнером</a>
+                    <a href="#" class="btn program-btn" data-sign-up>Стать партнером</a>
                 </div>
                 <div class="program-group">
                     <img class="program-img" src="assets/img/partners/program-img.jpg" alt="woman">
@@ -274,47 +276,59 @@
         </div>
     </section>
 
-    <div class="popup" data-popup>
+    <div class="popup" id="signUpPopup">
         <div class="popup-overlay">
-            <div class="popup-block">
-                <h2 class="popup-title">Заявка на партнёрство</h2>
-                <div class="popup-subtitle">Чтобы стать нашим партнёром, оформите заявку.</div>
-                <form class="popup-form">
-                    <div class="popup-form-wrap popup-form-wrap--cols">
-                        <label class="label required">
-                            <span>Наименование компании</span>
-                            <input class="input-text" required type="text" name="company" placeholder="ваша компания">
-                            <span class="wpcf7-not-valid-tip">Введите данные</span>
-                        </label>
-                        <label class="label required">
-                            <span>Город</span>
-                            <input class="input-text" required type="text" name="city" placeholder="ваш город">
-                        </label>
-                        <label class="label">
-                            <span>Сайт (при наличии)</span>
-                            <input class="input-text" type="text" name="site" placeholder="site.com">
-                        </label>
-                        <label class="label required">
-                            <span>Имя</span>
-                            <input class="input-text" required type="text" name="name" placeholder="ваше имя">
-                        </label>
-                        <label class="label required">
-                            <span>Мобильный телефон</span>
-                            <input class="input-text" required type="tel" name="name" placeholder="+7 (777) 777-77-77">
-                        </label>
-                        <label class="label required">
-                            <span>Электронная почта</span>
-                            <input class="input-text" required type="tel" name="name" placeholder="yourmail@gmail.com">
-                        </label>
+            <div class="popup-wrap">
+                <div class="popup-block">
+                    <!-- форма, основной контент окна. можно скрыть добавив класс hidden и показать уведомление -->
+                    <div class="popup-main">
+                        <h2 class="popup-title">Заявка на партнёрство</h2>
+                        <div class="popup-subtitle">Чтобы стать нашим партнёром, оформите заявку.</div>
+                        <form class="popup-form">
+                            <div class="popup-form-wrap popup-form-wrap--cols">
+                                <label class="label required">
+                                    <span>Наименование компании</span>
+                                    <input class="input-text" required type="text" name="company" placeholder="ваша компания">
+                                    <span class="wpcf7-not-valid-tip">Введите данные</span>
+                                </label>
+                                <label class="label required">
+                                    <span>Город</span>
+                                    <input class="input-text" required type="text" name="city" placeholder="ваш город">
+                                </label>
+                                <label class="label">
+                                    <span>Сайт (при наличии)</span>
+                                    <input class="input-text" type="text" name="site" placeholder="site.com">
+                                </label>
+                                <label class="label required">
+                                    <span>Имя</span>
+                                    <input class="input-text" required type="text" name="name" placeholder="ваше имя">
+                                </label>
+                                <label class="label required">
+                                    <span>Мобильный телефон</span>
+                                    <input class="input-text" required type="tel" name="name" placeholder="+7 (777) 777-77-77">
+                                </label>
+                                <label class="label required">
+                                    <span>Электронная почта</span>
+                                    <input class="input-text" required type="tel" name="name" placeholder="yourmail@gmail.com">
+                                </label>
+                            </div>
+                            <div class="popup-form-invalid-tip hidden">Нужно заполнить все поля со *.</div>
+                            <div class="popup-form-text">Заполняя форму, вы соглашаетесь с <a href="#">Политикой использования персональных данных</a>.</div>
+                            <input type="submit" value="Оставить заявку" class="btn popup-form-submit">
+                        </form>
                     </div>
-                    <div class="popup-form-invalid-tip hidden">Нужно заполнить все поля со *.</div>
-                    <div class="popup-form-text">Заполняя форму, вы соглашаетесь с <a href="#">Политикой использования персональных данных</a>.</div>
-                    <input type="submit" value="Оставить заявку" class="btn popup-form-submit">
-                </form>
+    
+                    <!-- уведомление -->
+                    <div class="popup-notif hidden">
+                        <h2 class="popup-notif-title">Заявка на партнёрство</h2>
+                        <div class="popup-notif-text">Спасибо! Ваша заявка принята, наш менеджер свяжется с Вами.</div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
     
+    <script src="assets/js/popup.js"></script>
     <script src="assets/js/header.js"></script>
 </body>
 </html>

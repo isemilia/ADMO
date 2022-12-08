@@ -99,6 +99,7 @@
             grid-template-columns: repeat(2, minmax(300px, 360px));
             column-gap: 60px;
             row-gap: 20px;
+            justify-content: center;
             @media (max-width: 1023px) {
                 grid-template-columns: repeat(2, 1fr);
                 column-gap: 30px;
@@ -175,9 +176,11 @@
         }
     }
     &-text {
+        max-width: 600px;
+        margin: 0 auto;
         margin-top: 25px;
         font-weight: 400;
-        font-size: 14px;
+        font-size: clamp(12px, 2vw, 14px);
         line-height: 1.2em;
         text-align: center;
         color: var(--clr-neutral-100);

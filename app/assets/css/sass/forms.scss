@@ -13,6 +13,9 @@
     width: 100vw;
     display: grid;
     place-content: center;
+    &-logo {
+        margin: 0 auto 10px;
+    }
     &-title {
         margin: 0;
         font-weight: 900;
@@ -61,7 +64,7 @@
     }
     &-text {
         margin-top: 20px;
-        font-weight: 400;
+        font-weight: 700;
         font-size: 14px;
         line-height: 1.2em;
         text-align: center;
@@ -69,6 +72,11 @@
         a {
             color: var(--clr-accent-200);
             text-underline-offset: 2px;
+        }
+        &--purple {
+            a {
+                color: var(--clr-accent-100);
+            }
         }
     }
     &-btn {

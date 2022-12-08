@@ -95,4 +95,10 @@
             margin-right: .5em;
         }
     }
+    .btn {
+        @media (max-width: 575px) {
+            padding-top: .87em;
+            padding-bottom: .87em;
+        }
+    }
 }

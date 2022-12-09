@@ -88,13 +88,17 @@
     max-width: 1000px;
     &-list {
         padding: 30px;
-        display: flex;
-        justify-content: space-between;
-        @media (max-width: 729px) {
-            flex-wrap: wrap;
-            gap: clamp(10px, 5vw, 40px);
-            row-gap: 40px;
-        }
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(105px, 1fr));
+        column-gap: clamp(20px, 5vw, 40px);
+        row-gap: 30px;
+        // display: flex;
+        // justify-content: space-between;
+        // @media (max-width: 729px) {
+        //     flex-wrap: wrap;
+        //     gap: clamp(10px, 5vw, 40px);
+        //     row-gap: 40px;
+        // }
     }
     &-item {
         display: block;

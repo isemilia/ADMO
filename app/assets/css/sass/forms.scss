@@ -24,6 +24,10 @@
         position: absolute;
         left: 130px;
         top: 65px;
+        @media (max-width: 1024px) {
+            left: 20px;
+            top: 20px;
+        }
     }
     &-logo {
         margin: 0 auto 10px;

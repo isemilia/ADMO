@@ -63,6 +63,7 @@
         &--wide {
             padding-left: 55px;
             padding-right: 55px;
+            min-width: 28.5vw;
         }
         @media (max-width: 1023px) {
             max-width: 82vw;

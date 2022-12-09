@@ -70,6 +70,11 @@
             line-height: 90.65%;
             text-align: center;
             color: var(--clr-neutral-100);
+            &.mxw-280 {
+                max-width: 280px;
+                margin-left: auto;
+                margin-right: auto;
+            }
         }
         &-body {
             margin-top: 25px;

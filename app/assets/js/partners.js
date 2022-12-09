@@ -55,4 +55,12 @@ window.addEventListener('DOMContentLoaded', () => {
             city.classList.add('cities-item--active');
         });
     });
+
+    if (window.innerWidth > 1024) {
+        cities.forEach(city => {
+            city.addEventListener('click', e => {
+                e.preventDefault();
+            });
+        });
+    } 
 });

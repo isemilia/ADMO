@@ -38,6 +38,9 @@
         width: 100%;
         max-width: 333px;
         height: 449px;
+        @media (max-width: 575px) {
+            display: none;
+        }
         &-caption {
             position: absolute;
             top: 60px;

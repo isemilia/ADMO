@@ -90,8 +90,11 @@
             --size: 100px;
             padding: 20px;
             inset: unset;
-            position: static;
+            position: relative;
             margin: 0 auto;
+            background: linear-gradient(135.74deg, #FFFFFF 16.65%, #F9F9F9 100%);
+            box-shadow: 24.5161px 24.5161px 49.0323px rgba(237, 237, 237, 0.2), -24.5161px -24.5161px 49.0323px rgba(237, 237, 237, 0.2), 24.5161px -24.5161px 49.0323px rgba(251, 251, 251, 0.9), -24.5161px 24.5161px 61.2903px rgba(237, 237, 237, 0.3), inset -1.22581px 1.22581px 1.22581px rgba(251, 251, 251, 0.3), inset 1.22581px -1.22581px 1.22581px rgba(237, 237, 237, 0.5);
+            z-index: -1;
         }
         &-item {
             align-items: flex-start;
@@ -110,6 +113,7 @@
             }
             &--white {
                 margin-top: 120px;
+                box-shadow: 0px -10px 14px rgba(208, 208, 251, 0.2), 0px 10px 14px rgba(208, 208, 251, 0.3);
                 .compare-item-behind {
                     z-index: -1;
                     top: -170px;

@@ -17,16 +17,62 @@ function bodyScrollToggle() {
     document.body.classList.toggle('no-scroll');
 }
 
-window.addEventListener('DOMContentLoaded', () => {
-    const partnersBtns = document.querySelectorAll('[data-become-partners]');
+function closeActivePopups(activeClass) {
+    const activePopups = document.querySelectorAll(`.${activeClass}`);
 
-    partnersBtns.forEach(btn => {
+    activePopups.forEach(item => {
+        item.classList.remove(activeClass);
+        bodyScrollToggle();
+    });
+}
+
+function initPopup({
+    triggersSelector,
+    popupSelector,
+    popupActiveClass,
+    popupOverlaySelector
+}) {
+    const btns = document.querySelectorAll(triggersSelector);
+
+    btns.forEach(btn => {
         btn.addEventListener('click', (e) => {
             e.preventDefault();
-            togglePopup('#partnersPopup', 'popup--active');
+            closeActivePopups('popup--active');
+            togglePopup(popupSelector, popupActiveClass);
             bodyScrollToggle();
         });
     });
 
-    closeByClickOutside('#partnersPopup', '.popup-overlay', 'popup--active');
+    closeByClickOutside(popupSelector, popupOverlaySelector, popupActiveClass);
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+
+    initPopup({
+        triggersSelector: '[data-become-partners]',
+        popupSelector: '#partnersPopup',
+        popupActiveClass: 'popup--active',
+        popupOverlaySelector: '.popup-overlay'
+    });
+    
+    initPopup({
+        triggersSelector: '[data-login-btn]',
+        popupSelector: '#loginPopup',
+        popupActiveClass: 'popup--active',
+        popupOverlaySelector: '.popup-overlay'
+    });
+    
+    initPopup({
+        triggersSelector: '[data-restore-pw]',
+        popupSelector: '#restorePwPopup',
+        popupActiveClass: 'popup--active',
+        popupOverlaySelector: '.popup-overlay'
+    });
+    
+    initPopup({
+        triggersSelector: '[data-signup-btn]',
+        popupSelector: '#signupPopup',
+        popupActiveClass: 'popup--active',
+        popupOverlaySelector: '.popup-overlay'
+    });
 });

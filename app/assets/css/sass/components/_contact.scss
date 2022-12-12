@@ -1,5 +1,8 @@
 .contact {
     padding: 110px 0 80px;
+    @media (max-width: 767px) {
+        padding: 60px 0 40px;
+    }
     &-wrap {
         display: grid;
         grid-template-columns: 1fr 1.5fr;
@@ -44,6 +47,13 @@
             height: var(--size);
             background: var(--clr-accent-200);
             border-radius: 100%;
+        }
+    }
+    &-side {
+        &:nth-child(1) {
+            @media (max-width: 575px) {
+                display: none;
+            }
         }
     }
     &-title {
@@ -139,6 +149,17 @@
         display: grid;
         place-content: center;
         padding: calc(var(--size) / 4.8);
+    }
+    &-cr {
+        margin-top: 50px;
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 1.2em;
+        color: var(--clr-neutral-100);
+        @media (max-width: 767px) {
+            margin-top: 20px;
+            text-align: center;
+        }
     }
 }
 

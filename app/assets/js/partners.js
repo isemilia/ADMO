@@ -27,8 +27,14 @@ window.addEventListener('DOMContentLoaded', () => {
         });
         window.addEventListener('click', (e) => {
             // console.log(e.target);
-            if (e.target != citiesWrap && e.target != citiesList && e.target != input && !e.target.classList.contains('cities-item')) {
-                citiesWrap.classList.remove('hero-cities--active');
+            if (window.innerWidth >= 1024) {
+                if (e.target != citiesWrap && e.target != citiesList && e.target != input && !e.target.classList.contains('cities-item')) {
+                    citiesWrap.classList.remove('hero-cities--active');
+                }
+            } else {
+                if (e.target != citiesWrap && e.target != citiesList && e.target != input) {
+                    citiesWrap.classList.remove('hero-cities--active');
+                }
             }
         });
     });
@@ -43,7 +49,7 @@ window.addEventListener('DOMContentLoaded', () => {
             } else if (input.value.toLowerCase() != '') {
                 city.classList.add('cities-item--active');
             }
-        })
+        });
     });
 
     cities.forEach((city, i) => {

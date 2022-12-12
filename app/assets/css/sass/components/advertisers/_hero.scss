@@ -116,7 +116,7 @@
 @media (max-width: 575px) {
     .hero {
         &-btn {
-            margin-top: 40px;
+            margin: 40px auto 0;
             grid-row: 3;
         }
     }

@@ -178,6 +178,10 @@
 
 @media (max-width: 575px) {
     .ability {
+        &-title {
+            text-align: center;
+            padding: 0 1em;
+        }
         &-collage {
             &-top, &-bottom {
                 position: absolute;

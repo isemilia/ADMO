@@ -1,6 +1,9 @@
 .purpose {
     padding: 80px 0;
-    background-image: url('../img/advertisers/purpose-bg.svg');
+    @media (min-width: 576px) {
+        background-image: url('../img/advertisers/purpose-bg-1440.svg');
+    }
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     min-height: 870px;

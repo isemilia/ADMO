@@ -6,9 +6,14 @@
         opacity: 0;
         transform-origin: center top;
         transition: all .5s ease-in;
+        margin-top: 0px;
         &--open {
             transform: scale(1);
             opacity: 1;
+            margin-top: 80px;
+            @media (max-width: 767px) {
+                margin-top: 40px;
+            }
         }
     }
     --first-cell-pl: clamp(20px, 6vw, 100px);

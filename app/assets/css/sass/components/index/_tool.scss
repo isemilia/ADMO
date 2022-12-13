@@ -14,7 +14,7 @@
         background-size: 100% 100%;
         background-repeat: no-repeat;
         padding: 16px;
-        max-width: 326px;
+        max-width: 322px;
         display: grid;
         place-content: center;
         position: absolute;
@@ -23,7 +23,7 @@
         transform: rotate(10deg);
         img {
             border-radius: 20px; //320x210
-            max-height: 220px;
+            // max-height: 220px;
             // max-width: 380px;
         }
     }

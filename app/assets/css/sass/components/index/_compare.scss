@@ -37,6 +37,7 @@
             line-height: 90.65%;
             span {
                 font-family: var(--ff-200);
+                font-weight: 300;
             }
         }
         &--white {
@@ -57,7 +58,7 @@
                 background-image: url('../img/overview-device.png');
                 background-size: 100% 100%;
                 background-repeat: no-repeat;
-                padding: 16px;
+                padding: 10px;
                 max-width: 240px;
                 display: grid;
                 place-content: center;

@@ -44,9 +44,9 @@
             content: '';
             display: block;
             position: absolute;
-            top: -12%;
-            left: -12%;
-            --size: clamp(320px, 45vw, 680px);
+            top: -14%;
+            left: -13%;
+            --size: clamp(320px, 45vw, 660px);
             width: var(--size);
             height: var(--size);
             background-image: url('../img/advertisers/hero-bg-outer.svg');
@@ -64,7 +64,7 @@
         margin-top: 1em;
         max-width: 576px;
         font-size: clamp(18px, 3vw, 32px);
-        line-height: 1.25em;
+        line-height: 1.15em;
         color: var(--clr-accent-100);
         @media (max-width: 575px) {
             justify-self: flex-start;
@@ -72,19 +72,22 @@
         .second {
             font-size: 1.2em;
         }
+        span {
+            font-weight: 300;
+        }
     }
     &-subtitle {
         max-width: 500px;
-        font-weight: 700;
-        font-size: clamp(16px, 1.8vw, 22px);
-        line-height: 1.25em;
+        font-weight: 750;
+        font-size: clamp(16px,1.8vw,24px);
+        line-height: 1.15em;
         color: var(--clr-neutral-100);
         @media (max-width: 575px) {
             justify-self: flex-start;
         }
     }
     &-text {
-        margin-top: 62px;
+        margin-top: 45px;
         font-weight: 500;
         font-size: clamp(14px, 1.6vw, 16px);
         line-height: 1.2em;
@@ -92,7 +95,7 @@
         max-width: 365px;
     }
     &-btn {
-        margin-top: 60px;
+        margin-top: 45px;
         min-width: 21em;
         @media (max-width: 575px) {
             justify-self: flex-start;

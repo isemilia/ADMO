@@ -107,6 +107,7 @@
 }
 @media (max-width: 767px) {
     .ability {
+        overflow: hidden;
         padding: 40px 0;
         background: var(--clr-neutral-300);
         &-title {
@@ -164,6 +165,7 @@
                 top: 0;
                 left: -15px;
                 z-index: -1;
+                box-shadow: -150px 0 0 0 var(--clr-neutral-200);
             }
         }
         &-device {

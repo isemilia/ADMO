@@ -1,8 +1,11 @@
 .overview {
-    padding: 20px 0 100px;
+    padding: 40px 0 100px;
     background-image: url('../img/overview-bg.png');
     background-repeat: no-repeat;
-    background-size: 40%;
+    background-size: 55%; //here
+    @media (min-width: 1600px) {
+        background-size: 40%; //here
+    }
     background-position: center center;
     @media (max-width: 767px) {
         padding: 20px 0 40px;
@@ -12,10 +15,6 @@
         margin: 0 auto;
         margin-top: 16px;
         max-width: fit-content;
-        // display: flex;
-        // align-items: center;
-        // justify-content: center;
-        // column-gap: 10px;
         &::after {
             content: '';
             vertical-align: middle;
@@ -35,15 +34,33 @@
             margin-top: 30px;
         }
     }
+    &-slide {
+        &.swiper-slide-prev {
+            .overview-item {
+                // align-items: flex-end;
+            }
+        }
+        &.swiper-slide-next {
+            .overview-item {
+                // align-items: flex-start;
+            }
+        }
+    }
     &-item {
         display: flex;
         flex-direction: column;
         align-items: center;
+        width: 100%; //here
+        transition: all .3s;
         &-img {
             background-image: url('../img/overview-device.png');
             background-size: 100% 100%;
             background-repeat: no-repeat;
-            padding: 16px;
+            padding: 12px; //here
+            @media (min-width: 768px) {
+                transform: scale(1.15); //here
+                padding: 16px;
+            }
             transform: scale(1);
             transform-origin: bottom center;
             transition: all .3s;
@@ -51,8 +68,11 @@
                 max-width: 80%;
             }
             img {
+                @media (min-width: 768px) {
+                    min-width: clamp(230px, 28vw, 370px); //here
+                }
                 border-radius: 20px; //380x240
-                max-height: 230px;
+                max-height: 274px;
                 // max-width: 380px;
             }
         }
@@ -83,7 +103,7 @@
             opacity: 1;
             transform: scale(1);
             transform-origin: bottom center;
-            transition: all .3s;
+            transition: all .4s;
             &.mxw-100 {
                 max-width: 100%;
             }

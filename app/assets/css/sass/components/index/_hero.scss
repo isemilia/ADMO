@@ -1,8 +1,11 @@
 .hero {
-    padding: 100px 0;
+    padding: 100px 0 120px; //here
     overflow: hidden;
     @media (min-width: 576px) {
-        background: url('../img/hero-gradient-bg.svg') right top / contain no-repeat;
+        background: url('../img/hero-gradient-bg.svg') right top / 62% no-repeat; //here
+    }
+    @media (min-width: 1640px) {
+        background-size: contain; //here
     }
     min-height: 580px;
     &-wrap {
@@ -43,7 +46,7 @@
             position: absolute;
             top: -12%;
             left: -12%;
-            --size: clamp(320px, 45vw, 640px);
+            --size: clamp(320px, 45vw, 680px); //here
             width: var(--size);
             height: var(--size);
             background-image: url('../img/hero-admo-bg-outer.svg');

@@ -1,6 +1,7 @@
 .hero {
     padding: 100px 0 120px;
     overflow: hidden;
+    position: relative;
     @media (min-width: 576px) {
         background: url('../img/hero-gradient-bg.svg') right top / 62% no-repeat;
     }
@@ -8,6 +9,20 @@
         background-size: contain;
     }
     min-height: 580px;
+    &::before {
+        content: '';
+        background-image: url('../img/advertisers/hero-blurred-circle.svg');
+        background-position: center center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: block;
+        --size: 310px;
+        width: var(--size);
+        height: var(--size);
+        position: absolute;
+        bottom: 0;
+        left: -130px;
+    }
     &-wrap {
         padding: 100px 0;
         position: relative;

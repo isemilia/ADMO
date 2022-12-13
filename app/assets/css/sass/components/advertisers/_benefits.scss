@@ -1,6 +1,6 @@
 .benefits {
     padding: 80px 0;
-    background: linear-gradient(to top, var(--clr-accent-100) 60%, #FFF 40%);
+    background: linear-gradient(to top, var(--clr-accent-100-light) 60%, #FFF 40%);
     @media (max-width: 767px) {
         background: var(--clr-accent-100);
     }
@@ -64,10 +64,10 @@
             }
             @media (min-width: 768px) {
                 &--shadow-100 {
-                    box-shadow: 0 -30px 60px 0px rgba(54, 225, 159, .3);
+                    box-shadow: 0 -25px 33px 0px rgba(54, 225, 159, .3);
                 }
                 &--shadow-200 {
-                    box-shadow: 0 -30px 60px 0px rgba(149, 151, 242, .5);
+                    box-shadow: 0 -25px 33px 0px rgba(149, 151, 242, .5);
                 }
             }
         }

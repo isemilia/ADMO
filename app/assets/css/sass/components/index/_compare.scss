@@ -1,5 +1,8 @@
 .compare {
     padding: 160px 0 80px;
+    &--mb {
+        margin-bottom: 80px;
+    }
     &-row {
         position: relative;
         display: grid;

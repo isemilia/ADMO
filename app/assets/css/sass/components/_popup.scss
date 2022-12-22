@@ -193,6 +193,9 @@
         &.wpcf7-not-valid {
             border: 1px solid #FF0400;
         }
+        &.invalid {
+            border: 1px solid #FF0400;
+        }
     }
     &-text {
         max-width: 600px;

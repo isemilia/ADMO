@@ -50,11 +50,23 @@
         width: fit-content;
         display: grid;
         place-content: center;
-        box-shadow: 0px 11.2462px 15.7446px rgba(116, 118, 235, 0.3);
+        box-shadow: 0px 11px 15px rgba(116, 118, 235, 0.3);
         border-radius: 22px;
         border: 14px solid var(--clr-neutral-200);
         border-left-width: 18px;
         border-right-width: 18px;
+        position: relative;
+        &::before {
+            position: absolute;
+            content: '';
+            display: block;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            background-color: #ffffff;
+            z-index: -1;
+        }
         img {
             border-radius: 10px;
         }

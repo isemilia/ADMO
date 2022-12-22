@@ -18,3 +18,9 @@
 @import 'components/advertisers/benefits';
 @import 'components/faq';
 @import 'components/contact';
+
+@media (min-width: 768px) {
+    .overview-item-img img {
+        min-width: clamp(230px,28vw,372px);
+    }
+}

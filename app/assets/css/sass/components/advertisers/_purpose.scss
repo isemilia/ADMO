@@ -1,7 +1,23 @@
 .purpose {
     padding: 80px 0;
+    position: relative;
     @media (min-width: 576px) {
-        background-image: url('../img/advertisers/purpose-bg-1440.svg');
+        // background-image: url('../img/advertisers/purpose-bg-1440.svg');
+        &-bg {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 30px;
+            z-index: -1;
+            img {
+                width: 100%;
+            }
+        }
+    }
+    @media (min-width: 1700px) {
+        &-bg {
+            top: -60px;
+        }
     }
     background-size: cover;
     background-repeat: no-repeat;

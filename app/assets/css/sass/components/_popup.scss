@@ -31,13 +31,14 @@
         max-width: 980px;
         padding: 50px 40px 45px;
         position: relative;
-        max-height: 80vh;
+        max-height: 100vh;
         overflow: auto;
         @media (max-width: 1023px) {
             max-width: 82vw;
         }
         @media (max-width: 767px) {
             padding: 30px 35px;
+            max-height: 85vh;
         }
         &--wide {
             padding-left: 55px;

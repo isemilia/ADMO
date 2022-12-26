@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADMO</title>
+
+    <link rel="stylesheet" href="assets/css/global.min.css">
+    <link rel="stylesheet" href="assets/css/reset.min.css">
+    <link rel="stylesheet" href="assets/css/forms.min.css">
+    <style>
+        @media (min-width: 1024px) {
+            .notif-text {
+                max-width: 470px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="form">
+        <div class="form-logo">
+            <img src="assets/img/logo-white.svg" alt="admo">
+        </div>
+        <div class="form-wrap">
+            <div class="form-block">
+                <div class="form-main hidden">
+                    <h2 class="form-title">Личная регистрация</h2>
+                    <form class="contact-form">
+                        <div class="contact-form-wrap contact-form-wrap--cols">
+                            <label class="label required">
+                                <span>Электронная почта</span>
+                                <input class="input-text" required type="email" name="email" placeholder="yourmail@gmail.com">
+                                <span class="wpcf7-not-valid-tip">Введите данные</span>
+                            </label>
+                            <label class="label required">
+                                <span>Имя</span>
+                                <input class="input-text" required type="text" name="name" placeholder="ваше имя">
+                            </label>
+                            <label class="label required">
+                                <span>Фамилия</span>
+                                <input class="input-text" required type="text" name="surname" placeholder="ваша фамилия">
+                            </label>
+                            <label class="label required">
+                                <span>Мобильный телефон</span>
+                                <input class="input-text" required type="tel" name="tel" placeholder="+7 (777) 777-77-77">
+                            </label>
+                            <label class="label required">
+                                <span>Пароль</span>
+                                <input class="input-text" required type="password" name="password" placeholder="ваш пароль">
+                            </label>
+                            <label class="label required">
+                                <span>Подтверждение пароля</span>
+                                <input class="input-text" required type="password" name="password" placeholder="ваш пароль">
+                            </label>
+                        </div>
+                        <div class="contact-form-invalid-tip hidden">Нужно заполнить все поля.</div>
+                        <div class="contact-form-text">
+                            Нажимая кнопку "Регистрация", вы принимаете наши <a href="#">Условия использования</a>, <a href="#">Политику конфиденциальности</a> и <a href="#">Политику в отношении файлов cookie</a>
+                        </div>
+                        <input type="submit" value="Регистрация" class="btn btn--green contact-form-submit">
+                    </form>
+
+                    <div class="form-text form-text--purple">
+                        Уже зарегистрированы?
+                        <a href="./login.html">Войти тут</a>
+                    </div>
+                </div>
+        
+                <!-- уведомление -->
+                <div class="notif">
+                    <h2 class="notif-title">Личная регистрация</h2>
+                    <div class="notif-text">Письмо с ссылкой для подтверждения отправлено на Вашу электронную почту. Пожалуйста, перейдите по ссылке, чтобы начать пользоваться личным кабинетом.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

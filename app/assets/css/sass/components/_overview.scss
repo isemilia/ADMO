@@ -1,5 +1,5 @@
 .overview {
-    padding: 40px 0 100px;
+    padding: 40px 0 125px;
     background-image: url('../img/overview-bg.png');
     background-repeat: no-repeat;
     background-size: 55%; //here
@@ -8,8 +8,8 @@
     }
     background-position: center center;
     @media (max-width: 767px) {
-        padding: 20px 0 40px;
-        background-size: contain;
+        padding: 10px 0 90px;
+        background-size: cover;
     }
     &-subtitle {
         margin: 0 auto;
@@ -116,6 +116,9 @@
             gap: 2px;
             align-items: center;
             justify-content: center;
+            @media (max-width: 767px) {
+                margin-top: -5px;
+            }
         }
         &-prev, &-next {
             --size: 42px;

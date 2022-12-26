@@ -26,3 +26,9 @@
         min-width: clamp(230px,28vw,372px);
     }
 }
+
+@media (max-width: 767px) {
+    .types {
+        padding: 0 0 80px;
+    }
+}

@@ -11,6 +11,13 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    /* ['resize', 'DOMContentLoaded'].forEach(event => {
+        window.addEventListener(event, (e) => {
+            e.preventDefault();
+            
+        })
+    }) */
+
     planBtn.addEventListener('click', e => {
         e.preventDefault();
         if (+planInfo.style.maxHeight.replace(/[a-z]/g, '') === 0) {
@@ -25,10 +32,18 @@ window.addEventListener('DOMContentLoaded', () => {
             planInfo.style.maxHeight = 0;
             planInfo.classList.toggle('plan-info-inner--open');
             changeBtnText();
-            window.scrollTo({
-                top: plan.offsetTop,
-                behavior: 'smooth'
-            });
+            if (window.innerWidth > 767) {
+                window.scrollTo({
+                    top: plan.offsetTop,
+                    behavior: 'smooth'
+                });
+            } else {
+                window.scrollTo({
+                    top: plan.offsetTop + 600,
+                    behavior: 'smooth'
+                });
+            }
         }
     });
+    
 });

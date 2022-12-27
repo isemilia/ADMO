@@ -23,3 +23,13 @@
 @import 'components/contact';
 
 @import 'components/popup';
+
+
+.overview {
+    @media (min-width: 1200px) {
+        background-position: center 60%;
+    }
+    @media (min-width: 1500px) {
+        background-position: center 70%;
+    }
+}

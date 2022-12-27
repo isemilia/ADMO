@@ -73,6 +73,14 @@
                 top: -40px;
                 right: -40px;
             }
+            @media (min-width:1024px) and (max-height: 800px) {
+                top: -45px;
+                right: -120px;
+            }
+            @media (min-width:1024px) and (max-height: 760px) {
+                top: -25px;
+                right: -120px;
+            }
         }
     }
     &-title {

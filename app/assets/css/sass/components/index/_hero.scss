@@ -1,11 +1,11 @@
 .hero {
-    padding: 100px 0 120px; //here
+    padding: 100px 0 120px; 
     overflow: hidden;
     @media (min-width: 576px) {
-        background: url('../img/hero-gradient-bg.svg') right top / 62% no-repeat; //here
+        background: url('../img/hero-gradient-bg.svg') right top / 62% no-repeat; 
     }
     @media (min-width: 1640px) {
-        background-size: contain; //here
+        background-size: contain; 
     }
     min-height: 580px;
     &-wrap {
@@ -54,9 +54,12 @@
             background-size: contain;
             @media (max-width: 575px) {
                 background-image: url('../img/hero-bg-mob.png');
-                --size: 520px;
-                top: -53%;
-                left: -52%;
+                // --size: 520px;
+                // top: -53%;
+                // left: -52%;
+                --size: 560px;
+                top: -64%;
+                left: -57%;
             }
         }
     }

@@ -21,6 +21,15 @@
 
 @import 'components/popup';
 
+.overview {
+    @media (min-width: 1200px) {
+        background-position: center 60%;
+    }
+    @media (min-width: 1500px) {
+        background-position: center 70%;
+    }
+}
+
 @media (min-width: 768px) {
     .overview-item-img img {
         min-width: clamp(230px,28vw,372px);

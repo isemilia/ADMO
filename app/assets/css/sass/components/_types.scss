@@ -47,13 +47,17 @@
     }
 }
 
-@media (max-width: 575px) and (min-width: 370px) {
+@media (max-width: 599px) and (min-width: 350px) {
     .types {
         &-grid {
-            grid-template-columns: repeat(2, 1fr);
+            // grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(2, minmax(140px, 280px));
             gap: 20px 10px;
         }
         &-item {
+            &-img {
+                overflow: hidden;
+            }
             &-title {
                 font-size: 14px;
             }

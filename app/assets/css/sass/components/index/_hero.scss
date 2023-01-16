@@ -53,13 +53,10 @@
             background-repeat: no-repeat;
             background-size: contain;
             @media (max-width: 575px) {
-                background-image: url('../img/hero-bg-mob.png');
-                // --size: 520px;
-                // top: -53%;
-                // left: -52%;
+                background-image: url('../img/hero-bg-mob.svg');
                 --size: 560px;
-                top: -64%;
-                left: -57%;
+                top: -67%;
+                left: -65%;
             }
         }
     }
